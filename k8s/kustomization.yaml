@@ -1,0 +1,27 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- helloworld-svc-deployment.yaml
+- helloworld-svc-service.yaml
+- helloworld-svc-route.yaml
+- helloworld-gui-deployment.yaml
+- helloworld-gui-service.yaml
+- helloworld-gui-route.yaml
+
+# Référence d'image gérée par Kustomize, pas par édition de texte brute :
+# la CI fait `kustomize edit set image <image>:<tag>` (cf. .gitlab-ci.yml),
+# qui modifie ce bloc, pas deployment.yaml directement. Tag par défaut =
+# la dernière version réellement construite et connue bonne au moment du
+# seed -- jamais un nom d'environnement ("dev"/"rec"/"preprod") qui ne
+# correspondrait à aucune image réelle tant qu'un premier déploiement n'a
+# pas eu lieu sur cette branche. Monorepo multi-services (cf. AGENTS.md) :
+# un seul tag vX.Y.Z déclenche le build/la promotion des deux services
+# ensemble, donc une entrée par service ici, même tag final.
+images:
+- name: helloworld-svc
+  newName: elkouhen/helloworld-svc
+  newTag: latest
+- name: helloworld-gui
+  newName: elkouhen/helloworld-gui
+  newTag: latest

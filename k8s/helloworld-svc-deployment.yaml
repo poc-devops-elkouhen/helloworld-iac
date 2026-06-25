@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helloworld-svc
+  labels:
+    app: helloworld-svc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: helloworld-svc
+  template:
+    metadata:
+      labels:
+        app: helloworld-svc
+    spec:
+      containers:
+        - name: helloworld-svc
+          image: helloworld-svc
+          ports:
+            - containerPort: 8000
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+          resources:
+            requests:
+              cpu: 50m
+              memory: 64Mi
+            limits:
+              cpu: 250m
+              memory: 128Mi

@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helloworld-gui
+  labels:
+    app: helloworld-gui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: helloworld-gui
+  template:
+    metadata:
+      labels:
+        app: helloworld-gui
+    spec:
+      containers:
+        - name: helloworld-gui
+          image: helloworld-gui
+          ports:
+            - containerPort: 80
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 80
+          resources:
+            requests:
+              cpu: 50m
+              memory: 64Mi
+            limits:
+              cpu: 250m
+              memory: 128Mi
