@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: helloworld-gui
-          image: registry.registry.svc.cluster.local:5000/helloworld-gui
+          image: registry.192.168.33.100.nip.io/helloworld-gui
           ports:
             - containerPort: 80
           readinessProbe:
