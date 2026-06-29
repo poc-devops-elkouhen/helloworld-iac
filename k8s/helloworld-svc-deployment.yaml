@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: helloworld-svc
-          image: helloworld-svc
+          image: registry.registry.svc.cluster.local:5000/helloworld-svc
           ports:
             - containerPort: 8000
           readinessProbe:
