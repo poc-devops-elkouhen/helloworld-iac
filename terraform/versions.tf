@@ -7,5 +7,9 @@ terraform {
       version = "~> 17.0"
     }
   }
-  # Le backend est injecté par tf-controller via backendConfig.secretSuffix
+  backend "kubernetes" {
+    secret_suffix     = "gitlab-iac"
+    namespace         = "flux-system"
+    in_cluster_config = true
+  }
 }
