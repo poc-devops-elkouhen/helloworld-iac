@@ -9,6 +9,6 @@ resources:
 - helloworld-gui-route.yaml
 images:
 - name: registry.registry.svc.cluster.local:5000/helloworld-svc
-  newTag: ba168ab8
+  newTag: 7c3db9b6
 - name: registry.registry.svc.cluster.local:5000/helloworld-gui
-  newTag: ba168ab8
+  newTag: 7c3db9b6
