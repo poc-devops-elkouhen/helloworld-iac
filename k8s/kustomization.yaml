@@ -12,3 +12,7 @@ images:
   newTag: 7c3db9b6
 - name: registry.registry.svc.cluster.local:5000/helloworld-gui
   newTag: 7c3db9b6
+- name: registry.192.168.33.100.nip.io/helloworld-svc
+  newTag: a161a0bd
+- name: registry.192.168.33.100.nip.io/helloworld-gui
+  newTag: a161a0bd
