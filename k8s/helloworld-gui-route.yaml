@@ -9,7 +9,7 @@ spec:
     - name: traefik-gateway
       namespace: default
   hostnames:
-    - helloworld-gui.192.168.33.100.nip.io
+    - helloworld-gui-rec.192.168.33.100.nip.io
   rules:
     - matches:
         - path:
