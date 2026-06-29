@@ -9,9 +9,9 @@ resources:
 - helloworld-gui-route.yaml
 images:
 - name: registry.192.168.33.100.nip.io/helloworld-svc
-  newTag: 1d3a3f6c
+  newTag: 6e5e913d
 - name: registry.192.168.33.100.nip.io/helloworld-gui
-  newTag: 1d3a3f6c
+  newTag: 6e5e913d
 - name: registry.192.168.33.100.nip.io/helloworld-svc
   newTag: a161a0bd
 - name: registry.192.168.33.100.nip.io/helloworld-gui
