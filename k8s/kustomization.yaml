@@ -12,3 +12,7 @@ images:
   newTag: v1.0.0
 - name: registry.registry.svc.cluster.local:5000/helloworld-gui
   newTag: v1.0.0
+- name: registry.192.168.33.100.nip.io/helloworld-svc
+  newTag: v1.0.2
+- name: registry.192.168.33.100.nip.io/helloworld-gui
+  newTag: v1.0.2
