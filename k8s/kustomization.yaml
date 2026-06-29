@@ -8,9 +8,9 @@ resources:
 - helloworld-gui-service.yaml
 - helloworld-gui-route.yaml
 images:
-- name: registry.registry.svc.cluster.local:5000/helloworld-svc
+- name: registry.192.168.33.100.nip.io/helloworld-svc
   newTag: 7c3db9b6
-- name: registry.registry.svc.cluster.local:5000/helloworld-gui
+- name: registry.192.168.33.100.nip.io/helloworld-gui
   newTag: 7c3db9b6
 - name: registry.192.168.33.100.nip.io/helloworld-svc
   newTag: a161a0bd
