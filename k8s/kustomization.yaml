@@ -8,7 +8,7 @@ resources:
 - helloworld-gui-service.yaml
 - helloworld-gui-route.yaml
 images:
-- name: registry.192.168.33.100.nip.io/helloworld-svc
+- name: ghcr.io/poc-devops-elkouhen/helloworld-svc
   newTag: v1.0.0
-- name: registry.192.168.33.100.nip.io/helloworld-gui
+- name: ghcr.io/poc-devops-elkouhen/helloworld-gui
   newTag: v1.0.0

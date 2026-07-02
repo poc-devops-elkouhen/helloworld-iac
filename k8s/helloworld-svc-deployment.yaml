@@ -14,9 +14,11 @@ spec:
       labels:
         app: helloworld-svc
     spec:
+      imagePullSecrets:
+        - name: ghcr-pull-secret
       containers:
         - name: helloworld-svc
-          image: registry.192.168.33.100.nip.io/helloworld-svc
+          image: ghcr.io/poc-devops-elkouhen/helloworld-svc
           ports:
             - containerPort: 8000
           readinessProbe:

@@ -33,7 +33,8 @@ La correspondance technique attendue est :
 - `dev` vers le namespace `helloworld-dev` ;
 - `rec` vers `helloworld-rec` ;
 - `preprod` vers `helloworld-preprod` ;
-- `main` vers `helloworld-prod`.
+- `main` vers `helloworld` (pas de suffixe `-prod` : c'est le namespace de
+  production, voir `AGENTS.md`).
 
 Les `Application` ArgoCD générées par la plateforme pointent chacune vers la
 branche et le namespace correspondants.
